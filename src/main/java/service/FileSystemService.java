@@ -29,6 +29,12 @@ public interface FileSystemService {
      */
     FileObject rename(String userId, String fileId, String newname);
 
+
+    /**
+     * 回退到指定版本
+     */
+    void rollBack(String userId, String fileId, int version);
+
     /**
      *
      * 设备配额、下载文件、重命名文件等等

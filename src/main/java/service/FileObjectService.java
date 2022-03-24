@@ -14,9 +14,20 @@ public interface FileObjectService {
     void createFile(FileObject file);
 
     /**
-     * 获取文件
+     * 获取文件的最新版本
      */
     FileObject getFileObject(String fileId);
+
+
+    /**
+     * 获取文件历史版本
+     */
+    FileObject getFileObjectWithVersion(String fileId, int verson);
+
+    /**
+     * 回滚文件版本
+     */
+    void rollBack(String fileId, int version);
 
     /**
      * 删除文件、修改文件权限、等

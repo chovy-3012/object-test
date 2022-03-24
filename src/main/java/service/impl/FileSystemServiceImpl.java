@@ -35,4 +35,9 @@ public class FileSystemServiceImpl implements FileSystemService {
         return fileObject;
     }
 
+    @Override
+    public void rollBack(String userId, String fileId, int version) {
+        fileObjectService.rollBack(fileId, version);
+    }
+
 }

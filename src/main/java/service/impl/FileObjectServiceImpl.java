@@ -20,4 +20,17 @@ public class FileObjectServiceImpl implements FileObjectService {
     public FileObject getFileObject(String fileId) {
         return null;
     }
+
+    @Override
+    public FileObject getFileObjectWithVersion(String fileId, int verson) {
+        // TODO 获取文件历史版本元信息和数据
+        return null;
+    }
+
+    @Override
+    public void rollBack(String fileId, int version) {
+        FileObject versionFile = getFileObjectWithVersion(fileId, version);
+        FileObject fileObject = getFileObject(fileId);
+        // TODO 将最新文件元信息替换为老版本文件信息,存储不用栋
+    }
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 public class FileObject {
     private String fileSystemId;
     private String filename;
+    private int version;
     // 文件或者文件夹
     private String type;
     private int size;
@@ -14,6 +15,14 @@ public class FileObject {
     private String storagePath;
     private Date time;
 
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
+    }
 
     public String getFilename() {
         return filename;

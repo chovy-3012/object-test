@@ -19,4 +19,11 @@ public class FileSystemController {
     public FileObject rename(String userId, String fileId, String newname) {
         return fileSystemService.rename(userId, fileId, newname);
     }
+
+    /**
+     * 回滚版本
+     */
+    public void rollBack(String userId, String fileId, int version) {
+        fileSystemService.rollBack(userId, fileId, version);
+    }
 }
